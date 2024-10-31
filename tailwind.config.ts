@@ -9,7 +9,10 @@ const config: Config = {
 				ink: '#000',
 				canvas: '#fff',
 
-				accent: '#000',
+				accent: '#212530',
+				flame: '#D5440A',
+				flameLight: '#F7E4D6',
+				flameDark: '#F6A329',
 			},
 			maxHeight: {
 				fold: 'calc(100svh - var(--header-height))',
@@ -22,7 +25,7 @@ const config: Config = {
 			addVariant('header-closed', 'body:has(#header-open:not(:checked)) &')
 		}),
 	],
-	safelist: [{ pattern: /action.*/ }, 'ghost'],
+	safelist: [{ pattern: /action.*/ }, 'ghost', 'flame-link'],
 }
 
 export default config
