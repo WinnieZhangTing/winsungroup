@@ -10,7 +10,7 @@ export default function ShowcaseCard({
   content,
   image,
   ctas,
-  imageOnRight,
+  imageOnLeft,
   ...props
 }: Partial<{
   title: string
@@ -18,12 +18,12 @@ export default function ShowcaseCard({
   content: any
   image: Sanity.Image
   ctas: Sanity.CTA[]
-  imageOnRight: boolean
+  imageOnLeft: boolean
 }> & Sanity.Module) {
   return (
     <section className="section anim-fade-to-t [--y:3rem] [animation-duration:0.8s]" {...moduleProps(props)}>
       <div className="grid gap-8 md:grid-cols-2 items-center">
-        <div className={cn('space-y-6 px-8', imageOnRight && 'md:order-last')}>
+        <div className={cn('space-y-6 px-8', imageOnLeft && 'md:order-last')}>
           <div className="space-y-4">
             <h2 className="h2">{title}</h2>
           </div>

@@ -20,6 +20,8 @@ import TabbedContent from './TabbedContent'
 import TestimonialList from './TestimonialList'
 import TestimonialFeatured from './TestimonialFeatured'
 import ShowcaseCard from './ShowcaseCard'
+import CurrentProjectSlider from './CurrentProjectSlider'
+
 export default function Modules({
 	modules,
 	page,
@@ -83,7 +85,8 @@ export default function Modules({
 						return <TestimonialFeatured {...module} key={module._key} />
 					case 'showcase-card':
 						return <ShowcaseCard {...module} key={module._key} />
-
+					case 'current-project-slider':
+						return <CurrentProjectSlider {...module} key={module._key} />
 					default:
 						return <div data-type={module._type} key={module._key} />
 				}

@@ -43,6 +43,7 @@ export default defineType({
 				{ type: 'testimonial-list' },
 				{ type: 'testimonial.featured' },
 				{ type: 'showcase-card' },
+				{ type: 'current-project-slider' },
 			],
 			options: {
 				insertMenu: {

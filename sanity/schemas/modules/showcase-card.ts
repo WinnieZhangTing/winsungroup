@@ -52,10 +52,10 @@ export default defineType({
       group: 'content'
     }),
     defineField({
-      name: 'imageOnRight',
+      name: 'imageOnLeft',
       title: 'Image position',
       type: 'boolean',
-      description: 'Display image on the right side',
+      description: 'Display image on the left side',
       initialValue: false,
       group: 'options'
     })

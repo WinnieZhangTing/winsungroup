@@ -11,6 +11,8 @@ const config: Config = {
 
 				accent: '#212530',
 				flame: '#D5440A',
+				flameLight: '#F7E4D6',
+				flameDark: '#F6A329',
 			},
 			maxHeight: {
 				fold: 'calc(100svh - var(--header-height))',

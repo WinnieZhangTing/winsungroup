@@ -42,6 +42,8 @@ import tabbedContent from './modules/tabbed-content'
 import testimonialFeatured from './modules/testimonial.featured'
 import testimonialList from './modules/testimonial-list'
 import showcaseCard from './modules/showcase-card'
+import currentProjectSlider from './modules/current-project-slider'
+
 export const schemaTypes = [
 	// documents
 	site,
@@ -87,4 +89,5 @@ export const schemaTypes = [
 	testimonialFeatured,
 	testimonialList,
 	showcaseCard,
+	currentProjectSlider,
 ]
