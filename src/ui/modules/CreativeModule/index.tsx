@@ -17,6 +17,7 @@ export default function CreativeModule({
 	bordered,
 	textAlign,
 	alignItems,
+	hoverEffect,
 }: Partial<{
 	intro: any
 	modules: Partial<{
@@ -28,11 +29,13 @@ export default function CreativeModule({
 			| RichtextSubModuleType
 		>
 		colSpan: number
+		hoverEffect: boolean
 	}>[]
 	columns: number
 	bordered: boolean
 	textAlign: React.CSSProperties['textAlign']
 	alignItems: React.CSSProperties['alignItems']
+	hoverEffect: boolean
 }>) {
 	const imageWidth = Math.round((1200 / (modules?.length || 1)) * 1.5)
 
@@ -61,7 +64,7 @@ export default function CreativeModule({
 					{modules?.map(({ subModules, colSpan = 1 }, i) => (
 						<article
 							className={cn(
-								'space-y-4',
+								(hoverEffect && 'hover:bg-primary space-y-4') || 'space-y-4',
 								colSpan > 1 && 'md:col-[var(--col-span,1)]',
 								bordered && 'rounded border p-4',
 							)}

@@ -13,6 +13,8 @@ const config: Config = {
 				flame: '#D5440A',
 				flameLight: '#F7E4D6',
 				flameDark: '#F6A329',
+				primary: '#F6A329',
+				secondary: '#1B2B3A',
 			},
 			maxHeight: {
 				fold: 'calc(100svh - var(--header-height))',

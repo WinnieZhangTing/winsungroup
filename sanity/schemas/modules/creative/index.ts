@@ -93,6 +93,13 @@ export default defineType({
 			fieldset: 'alignment',
 			hidden: ({ parent }) => parent.bordered,
 		}),
+		defineField({
+			name: 'hoverEffect',
+			type: 'boolean',
+			initialValue: false,
+			group: 'options',
+			description: 'When enabled, the module will have a hover effect',
+		}),
 	],
 	preview: {
 		select: {

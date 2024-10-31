@@ -31,6 +31,7 @@ export default function Hero({
 					'grid overflow-hidden bg-ink text-canvas *:col-span-full *:row-span-full',
 			)}
 		>
+			<div className="bg-secondary inset-0 opacity-60" />
 			{hasImage && (
 				<picture>
 					<Source image={bgImageMobile} imageWidth={1200} />
@@ -62,7 +63,7 @@ export default function Hero({
 						)}
 						style={{ textAlign: stegaClean(textAlign) }}
 					>
-						<Pretitle className={cn(hasImage && 'text-canvas/70')}>
+						<Pretitle className={cn(hasImage && 'text-primary text-4xl')}>
 							{pretitle}
 						</Pretitle>
 

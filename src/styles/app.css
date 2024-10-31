@@ -48,31 +48,31 @@
 	/* typography */
 
 	._h {
-		font-weight: bold;
+		/* font-weight: bold; */
 	}
 
 	.h1 {
-		@apply _h text-3xl;
+		@apply _h text-5xl;
 	}
 
 	.h2 {
-		@apply _h text-2xl;
+		@apply _h text-4xl;
 	}
 
 	.h3 {
-		@apply _h text-xl;
+		@apply _h text-3xl;
 	}
 
 	.h4 {
-		@apply _h text-lg;
+		@apply _h text-2xl;
 	}
 
 	.h5 {
-		@apply _h;
+		@apply _h text-xl;
 	}
 
 	.h6 {
-		@apply _h;
+		@apply _h text-lg;
 	}
 
 	.technical {
@@ -101,7 +101,11 @@
 	}
 
 	.action {
-		@apply _btn text-balance rounded border border-transparent bg-accent text-white;
+		@apply _btn bg-primary text-balance rounded border border-transparent text-accent;
+	}
+
+	.action:hover {
+		@apply _btn bg-primary bg-opacity-80;
 	}
 
 	.action-outline {
@@ -113,10 +117,11 @@
 	}
 
 	.link {
-		text-decoration: underline;
+		text-decoration: none;
 
 		&:hover {
 			text-decoration-thickness: 2px;
+			color: theme('colors.primary');
 		}
 	}
 
