@@ -20,6 +20,11 @@ export default defineType({
 	fieldsets: [alignmentFieldset],
 	fields: [
 		defineField({
+			name: 'pretitle',
+			type: 'string',
+			group: 'content',
+		}),
+		defineField({
 			name: 'intro',
 			type: 'array',
 			of: [{ type: 'block' }],
@@ -99,6 +104,13 @@ export default defineType({
 			initialValue: false,
 			group: 'options',
 			description: 'When enabled, the module will have a hover effect',
+		}),
+		defineField({
+			name: 'background',
+			type: 'boolean',
+			initialValue: false,
+			group: 'options',
+			description: 'When enabled, the module will have a background',
 		}),
 	],
 	preview: {

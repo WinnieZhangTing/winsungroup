@@ -9,8 +9,10 @@ import RichtextSubModule, {
 	type RichtextSubModuleType,
 } from './RichtextSubModule'
 import { cn } from '@/lib/utils'
+import Pretitle from '@/ui/Pretitle'
 
 export default function CreativeModule({
+	pretitle,
 	intro,
 	modules,
 	columns,
@@ -18,7 +20,9 @@ export default function CreativeModule({
 	textAlign,
 	alignItems,
 	hoverEffect,
+	background,
 }: Partial<{
+	pretitle: string
 	intro: any
 	modules: Partial<{
 		subModules: Array<
@@ -29,28 +33,34 @@ export default function CreativeModule({
 			| RichtextSubModuleType
 		>
 		colSpan: number
-		hoverEffect: boolean
+		background: boolean
 	}>[]
 	columns: number
 	bordered: boolean
 	textAlign: React.CSSProperties['textAlign']
 	alignItems: React.CSSProperties['alignItems']
 	hoverEffect: boolean
+	background: boolean
 }>) {
 	const imageWidth = Math.round((1200 / (modules?.length || 1)) * 1.5)
 
 	return (
-		<section>
+		<section className={cn(background && 'bg-bgPrimary py-12')}>
 			<div className="section space-y-8">
+				{pretitle && (
+					<Pretitle className="text-primary mx-auto text-center text-lg">
+						{pretitle}
+					</Pretitle>
+				)}
 				{intro && (
-					<header className="richtext mx-auto max-w-xl text-balance text-center">
+					<header className="richtext mx-auto max-w-xl text-center">
 						<PortableText value={intro} />
 					</header>
 				)}
 
 				<div
 					className={cn(
-						'grid items-center md:grid-cols-[repeat(var(--col,1),minmax(0px,1fr))]',
+						'mt-12 grid items-center md:grid-cols-[repeat(var(--col,1),minmax(0px,1fr))]',
 						bordered ? 'gap-4' : 'gap-x-12 gap-y-8',
 					)}
 					style={
@@ -65,8 +75,9 @@ export default function CreativeModule({
 						<article
 							className={cn(
 								(hoverEffect && 'hover:bg-primary space-y-4') || 'space-y-4',
+								background && 'bg-white',
 								colSpan > 1 && 'md:col-[var(--col-span,1)]',
-								bordered && 'rounded border p-4',
+								bordered ? 'rounded border p-6' : 'rounded-xl p-6',
 							)}
 							style={
 								{

@@ -15,6 +15,7 @@ const config: Config = {
 				flameDark: '#F6A329',
 				primary: '#F6A329',
 				secondary: '#1B2B3A',
+				bgPrimary: '#F7E4D6',
 			},
 			maxHeight: {
 				fold: 'calc(100svh - var(--header-height))',

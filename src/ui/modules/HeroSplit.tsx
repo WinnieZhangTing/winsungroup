@@ -32,7 +32,7 @@ export default function HeroSplit({
 			</figure>
 
 			<div className="richtext mx-auto w-full max-w-lg [&_:is(h1,h2)]:text-balance">
-				<Pretitle>{pretitle}</Pretitle>
+				<Pretitle className="text-primary text-2xl">{pretitle}</Pretitle>
 				<PortableText
 					value={content}
 					components={{
