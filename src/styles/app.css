@@ -120,6 +120,10 @@
 		}
 	}
 
+	.flame-link {
+		@apply text-flame hover:text-flame/90 hover:underline;
+	}
+
 	.is-external::after {
 		content: ' ↗';
 		font-size: 0.7em;

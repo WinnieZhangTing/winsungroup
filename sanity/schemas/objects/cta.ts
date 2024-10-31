@@ -20,6 +20,7 @@ export default defineType({
 					{ title: 'Outline', value: 'action-outline' },
 					'ghost',
 					'link',
+					{ title: 'Flame link', value: 'flame-link' },
 				],
 			},
 		}),
