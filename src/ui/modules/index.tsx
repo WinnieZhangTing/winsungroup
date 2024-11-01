@@ -22,6 +22,9 @@ import TestimonialFeatured from './TestimonialFeatured'
 import ShowcaseCard from './ShowcaseCard'
 import CurrentProjectSlider from './CurrentProjectSlider'
 import PageTitle from './PageTitle'
+import NewsFrontpage from './news/NewsFrontpage'
+import NewsList from './news/NewsList'
+import NewsPostContent from './news/PostContent'
 
 export default function Modules({
 	modules,
@@ -30,7 +33,7 @@ export default function Modules({
 }: {
 	modules?: Sanity.Module[]
 	page?: Sanity.Page
-	post?: Sanity.BlogPost
+	post?: Sanity.BasePost
 }) {
 	return (
 		<>
@@ -44,6 +47,12 @@ export default function Modules({
 						return <BlogList {...module} key={module._key} />
 					case 'blog-post-content':
 						return <PostContent {...module} post={post} key={module._key} />
+					case 'news-post-content':
+						return <NewsPostContent {...module} post={post} key={module._key} />
+					case 'news-frontpage':
+						return <NewsFrontpage {...module} key={module._key} />
+					case 'news-list':
+						return <NewsList {...module} key={module._key} />
 					case 'breadcrumbs':
 						return (
 							<Breadcrumbs

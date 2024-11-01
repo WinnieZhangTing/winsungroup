@@ -17,3 +17,12 @@ export function slug(str: string) {
 		.replace(/^-+/, '')
 		.replace(/-+$/, '')
 }
+
+export function getSegment(page: Sanity.PageBase) {
+	return typeToSegment[page._type] || null
+}
+
+export const typeToSegment: Record<string, string> = {
+	'blog.post': 'blog',
+	'news.post': 'news',
+}

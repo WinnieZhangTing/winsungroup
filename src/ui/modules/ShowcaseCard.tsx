@@ -23,7 +23,7 @@ export default function ShowcaseCard({
   return (
     <section 
       data-aos="fade-up"
-      data-aos-delay="400"
+      data-aos-delay="200"
       data-aos-duration="800"
       data-aos-easing="ease-in-out"
       className="section" 
