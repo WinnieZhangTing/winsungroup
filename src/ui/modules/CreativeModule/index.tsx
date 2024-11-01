@@ -77,7 +77,7 @@ export default function CreativeModule({
 								(hoverEffect && 'hover:bg-primary space-y-4') || 'space-y-4',
 								background && 'bg-white',
 								colSpan > 1 && 'md:col-[var(--col-span,1)]',
-								bordered ? 'rounded border p-6' : 'rounded-xl p-6',
+								bordered ? 'border p-6' : 'rounded-xl p-6',
 							)}
 							style={
 								{

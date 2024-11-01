@@ -45,7 +45,12 @@ export default function Hero({
 			)}
 
 			{content && (
-				<div className="section flex w-full flex-col">
+				<div
+					className="section flex w-full flex-col"
+					data-aos="fade-up"
+					data-aos-duration="800"
+					data-aos-easing="ease-in-out"
+				>
 					<div
 						className={cn(
 							'richtext relative isolate max-w-xl [&_:is(h1,h2)]:text-balance',

@@ -13,6 +13,11 @@ export default defineType({
 	],
 	fields: [
 		defineField({
+			name: 'pretitle',
+			type: 'string',
+			group: 'content',
+		}),
+		defineField({
 			name: 'intro',
 			type: 'array',
 			of: [{ type: 'block' }],
@@ -64,6 +69,21 @@ export default defineType({
 				layout: 'radio',
 			},
 			initialValue: 'left',
+			group: 'options',
+		}),
+		defineField({
+			name: 'columns',
+			type: 'number',
+			group: 'options',
+		}),
+		defineField({
+			name: 'bordered',
+			type: 'boolean',
+			group: 'options',
+		}),
+		defineField({
+			name: 'hoverEffect',
+			type: 'boolean',
 			group: 'options',
 		}),
 	],
