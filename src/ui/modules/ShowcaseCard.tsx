@@ -21,7 +21,14 @@ export default function ShowcaseCard({
   imageOnLeft: boolean
 }> & Sanity.Module) {
   return (
-    <section className="section anim-fade-to-t [--y:3rem] [animation-duration:0.8s]" {...moduleProps(props)}>
+    <section 
+      data-aos="fade-up"
+      data-aos-delay="400"
+      data-aos-duration="800"
+      data-aos-easing="ease-in-out"
+      className="section" 
+      {...moduleProps(props)}
+    >
       <div className="grid gap-8 md:grid-cols-2 items-center">
         <div className={cn('space-y-6 px-8', imageOnLeft && 'md:order-last')}>
           <div className="space-y-4">

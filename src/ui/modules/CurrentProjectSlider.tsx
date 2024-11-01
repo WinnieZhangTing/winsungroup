@@ -35,7 +35,7 @@ export default function CurrentProjectSlider({
 
   return (
     <section 
-      className="section py-0 relative overflow-hidden bg-flameLight"
+      className="section py-0 px-24 relative overflow-hidden bg-flameLight"
       {...moduleProps(props)}
     >
       <AnimatePresence mode="wait">
@@ -66,7 +66,7 @@ export default function CurrentProjectSlider({
         </motion.div>
       </AnimatePresence>
 
-      <div className="absolute bottom-8 right-8 flex gap-4">
+      <div className="absolute bottom-8 right-16 flex gap-4">
         <button 
           onClick={prev}
           className="flex size-12 items-center justify-center rounded-lg bg-black text-flameDark transition-colors hover:bg-white"
