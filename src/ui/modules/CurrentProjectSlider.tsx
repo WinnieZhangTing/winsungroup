@@ -28,60 +28,70 @@ export default function CurrentProjectSlider({
   }
 
   const prev = () => {
-    setCurrentIndex((prev) => 
+    setCurrentIndex((prev) =>
       prev === 0 ? (projects?.length || 0) - 1 : prev - 1
     )
   }
 
   return (
-    <section 
-      className="section py-0 px-24 relative overflow-hidden bg-flameLight"
-      {...moduleProps(props)}
-    >
-      <AnimatePresence mode="wait">
-        <motion.div
-          key={currentIndex}
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
-          className="grid min-h-[500px] items-center gap-12 md:grid-cols-2"
-        >
-          <div className={cn('space-y-6', imageOnLeft && 'md:order-last')}>
-            <h3 className="text-3xl font-bold text-ink md:text-4xl">
-              {projects?.[currentIndex]?.title}
-            </h3>
-            <p className="text-balance text-lg leading-relaxed text-ink/90">
-              {projects?.[currentIndex]?.description}
-            </p>
-          </div>
+    <div className="bg-bgPrimary">
+      <section
+        className="section py-0 relative overflow-hidden bg-flameLight"
+        {...moduleProps(props)}
+      >
+        <div
+          data-aos="fade-up"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-out">
 
-          <div className="relative overflow-hidden rounded-lg">
-            <Img
-              image={projects?.[currentIndex]?.image}
-              className="h-96 w-full object-cover"
-              alt={projects?.[currentIndex]?.title}
-            />
-          </div>
-        </motion.div>
-      </AnimatePresence>
 
-      <div className="absolute bottom-8 right-16 flex gap-4">
-        <button 
-          onClick={prev}
-          className="flex size-12 items-center justify-center rounded-lg bg-black text-flameDark transition-colors hover:bg-white"
-          aria-label="Previous project"
-        >
-          <CgChevronLeft className="size-6" />
-        </button>
-        <button
-          onClick={next} 
-          className="flex size-12 items-center justify-center rounded-lg bg-black text-flameDark transition-colors hover:bg-white"
-          aria-label="Next project"
-        >
-          <CgChevronRight className="size-6" />
-        </button>
-      </div>
-    </section>
+          <AnimatePresence mode="wait">
+            <motion.div
+
+              key={currentIndex}
+              // initial={{ opacity: 0, x: 100 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -100 }}
+              transition={{ duration: 0.5 }}
+              className="grid min-h-[500px] items-center gap-12 md:grid-cols-2"
+            >
+              <div className={cn('space-y-6', imageOnLeft && 'md:order-last')}>
+                <h3 className="text-3xl font-bold text-ink md:text-4xl">
+                  {projects?.[currentIndex]?.title}
+                </h3>
+                <p className="text-balance text-lg leading-relaxed text-ink/90">
+                  {projects?.[currentIndex]?.description}
+                </p>
+              </div>
+
+              <div className="relative overflow-hidden rounded-lg">
+                <Img
+                  image={projects?.[currentIndex]?.image}
+                  className="h-96 w-full object-cover"
+                  alt={projects?.[currentIndex]?.title}
+                />
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        <div className="absolute bottom-8 right-16 flex gap-4">
+          <button
+            onClick={prev}
+            className="flex size-12 items-center justify-center rounded-lg bg-black text-flameDark transition-colors hover:bg-white"
+            aria-label="Previous project"
+          >
+            <CgChevronLeft className="size-6" />
+          </button>
+          <button
+            onClick={next}
+            className="flex size-12 items-center justify-center rounded-lg bg-black text-flameDark transition-colors hover:bg-white"
+            aria-label="Next project"
+          >
+            <CgChevronRight className="size-6" />
+          </button>
+        </div>
+      </section>
+    </div>
   )
 }
