@@ -30,7 +30,7 @@ export default defineType({
 		defineField({
 			name: 'internal',
 			type: 'reference',
-			to: [{ type: 'page' }, { type: 'blog.post' }, { type: 'news.post' }],
+			to: [{ type: 'page' }, { type: 'blog.post' }, { type: 'news.post' }, { type: 'case-study.post' }],
 			hidden: ({ parent }) => parent?.type !== 'internal',
 		}),
 		defineField({

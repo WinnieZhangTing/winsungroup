@@ -14,7 +14,7 @@ export default function PostContent({
 }: { post?: Sanity.BasePost } & Sanity.Module) {
 	if (!post) return null
 
-	const showTOC = !post.hideTableOfContents || !!post.headings?.length
+	const showTOC = !post.hideTableOfContents && !!post.headings?.length
 
 	return (
 		<article {...moduleProps(props)}>

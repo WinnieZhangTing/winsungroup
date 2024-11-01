@@ -1,12 +1,10 @@
 import moduleProps from '@/lib/moduleProps'
-import Date from '@/ui/Date'
-import Categories from './Categories'
-import Authors from './Authors'
-import ReadTime from './ReadTime'
+
 import TableOfContents from '@/ui/modules/RichtextModule/TableOfContents'
 import Content from '@/ui/modules/RichtextModule/Content'
 import { cn } from '@/lib/utils'
 import css from './PostContent.module.css'
+import RichtextModule from '@/ui/modules/RichtextModule'
 
 export default function PostContent({
 	post,
@@ -21,23 +19,19 @@ export default function PostContent({
 			<header className="section space-y-6 text-center">
 				<h1 className="h1 text-balance">{post.metadata.title}</h1>
 				<div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
-					<Date value={post.publishDate} />
-					<Categories
-						className="flex flex-wrap gap-x-2"
-						categories={post.categories}
-					/>
-					<ReadTime value={post.readTime} />
-				</div>
 
-				{post.authors?.length && (
-					<Authors
-						className="flex flex-wrap items-center justify-center gap-4"
-						authors={post.authors}
-					/>
-				)}
+				</div>
 			</header>
 
-			<div
+			<RichtextModule
+				content={post.body}
+				tableOfContents={showTOC}
+				tocPosition="right"
+				headings={post.headings}
+				stretch={true}
+				{...props}
+			/>
+			{/* <div
 				className={cn(
 					'section grid gap-8',
 					showTOC && 'lg:grid-cols-[1fr,auto]',
@@ -55,7 +49,7 @@ export default function PostContent({
 				>
 					<hr />
 				</Content>
-			</div>
+			</div> */}
 		</article>
 	)
 }
