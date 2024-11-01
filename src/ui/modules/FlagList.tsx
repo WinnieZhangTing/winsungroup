@@ -26,7 +26,12 @@ export default function FlagList({
 	hoverEffect: boolean
 }>) {
 	return (
-		<section className="section space-y-8">
+		<section
+			className="section space-y-8"
+			data-aos="fade-up"
+			data-aos-duration="800"
+			data-aos-easing="ease-in-out"
+		>
 			{pretitle && (
 				<Pretitle className="text-primary text-center text-lg">
 					{pretitle}
