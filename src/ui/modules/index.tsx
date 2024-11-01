@@ -21,6 +21,7 @@ import TestimonialList from './TestimonialList'
 import TestimonialFeatured from './TestimonialFeatured'
 import ShowcaseCard from './ShowcaseCard'
 import CurrentProjectSlider from './CurrentProjectSlider'
+import PageTitle from './PageTitle'
 
 export default function Modules({
 	modules,
@@ -87,6 +88,8 @@ export default function Modules({
 						return <ShowcaseCard {...module} key={module._key} />
 					case 'current-project-slider':
 						return <CurrentProjectSlider {...module} key={module._key} />
+					case 'page-title':
+						return <PageTitle {...module} key={module._key} />
 					default:
 						return <div data-type={module._type} key={module._key} />
 				}

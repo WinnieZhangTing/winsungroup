@@ -43,6 +43,7 @@ import testimonialFeatured from './modules/testimonial.featured'
 import testimonialList from './modules/testimonial-list'
 import showcaseCard from './modules/showcase-card'
 import currentProjectSlider from './modules/current-project-slider'
+import pageTitle from './modules/page-title'
 
 export const schemaTypes = [
 	// documents
@@ -90,4 +91,5 @@ export const schemaTypes = [
 	testimonialList,
 	showcaseCard,
 	currentProjectSlider,
+	pageTitle,
 ]
