@@ -1,9 +1,10 @@
 import { getSite } from '@/lib/sanity/queries'
 import processUrl from './processUrl'
 import type { Metadata } from 'next'
+import { getSegment } from './utils'
 
 export default async function processMetadata(
-	page: Sanity.Page | Sanity.BlogPost,
+	page: Sanity.Page | Sanity.BasePost,
 ): Promise<Metadata> {
 	const site = await getSite()
 
@@ -27,7 +28,7 @@ export default async function processMetadata(
 		alternates: {
 			canonical: url,
 			types: {
-				'application/rss+xml': '/blog/rss.xml',
+				'application/rss+xml': `/${getSegment(page) || 'blog'}/rss.xml`,
 			},
 		},
 	}

@@ -42,21 +42,51 @@ declare global {
 			modules?: Module[]
 		}
 
-		type BlogPost = PageBase & {
-			readonly _type: 'blog.post'
+
+		type PostCategory = SanityDocument<{
+			title: string
+		}>
+
+		interface BasePost extends PageBase {
 			body: any
 			readTime: number
 			headings?: { style: string; text: string }[]
-			categories: BlogCategory[]
+			categories: PostCategory[]
 			authors: Person[]
 			featured: boolean
 			hideTableOfContents: boolean
 			publishDate: string
 		}
 
-		type BlogCategory = SanityDocument<{
-			title: string
-		}>
+		interface BlogPost extends BasePost {
+			readonly _type: 'blog.post'
+			categories: BlogCategory[]
+		}
+
+		type BlogCategory = PostCategory
+
+		// type BlogPost = PageBase & {
+		// 	readonly _type: 'blog.post'
+		// 	body: any
+		// 	readTime: number
+		// 	headings?: { style: string; text: string }[]
+		// 	categories: BlogCategory[]
+		// 	authors: Person[]
+		// 	featured: boolean
+		// 	hideTableOfContents: boolean
+		// 	publishDate: string
+		// }
+
+		// type BlogCategory = SanityDocument<{
+		// 	title: string
+		// }>
+
+		interface NewsPost extends BasePost {
+			readonly _type: 'news.post'
+			categories: NewsCategory[]
+		}
+
+		type NewsCategory = PostCategory
 
 		// miscellaneous
 
@@ -122,7 +152,7 @@ declare global {
 			readonly _type: 'link'
 			label: string
 			type: 'internal' | 'external'
-			internal?: Page | BlogPost
+			internal?: Page | BlogPost | NewsPost | BasePost
 			external?: string
 			params?: string
 		}

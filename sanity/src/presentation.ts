@@ -1,8 +1,9 @@
+import { typeToSegment } from '@/lib/utils'
 import { map } from 'rxjs'
 import type { DocumentLocationResolver } from 'sanity/presentation'
 
 export const locations: DocumentLocationResolver = (params, context) => {
-	if (['page', 'blog.post'].includes(params.type)) {
+	if (['page', 'blog.post', 'news.post'].includes(params.type)) {
 		const doc$ = context.documentStore.listenQuery(
 			`*[_id == $id][0]{title,metadata}`,
 			params,
@@ -13,7 +14,8 @@ export const locations: DocumentLocationResolver = (params, context) => {
 			map((doc) => {
 				if (!doc?.metadata?.slug?.current) return null
 
-				const segment = params.type === 'blog.post' ? '/blog' : ''
+				//const segment = params.type === 'blog.post' ? '/blog' : (params.type === 'news.post' ? '/news' : '')
+				const segment = typeToSegment[params.type] ? `/${typeToSegment[params.type]}` : ''
 				const slug = doc.metadata.slug.current
 				const path = slug === 'index' ? '' : `/${slug}`
 

@@ -1,4 +1,5 @@
 import { stegaClean } from 'next-sanity'
+import { getSegment } from './utils'
 
 export default function (
 	page: Sanity.PageBase,
@@ -10,7 +11,7 @@ export default function (
 		params?: string
 	} = {},
 ) {
-	const segment = page._type === 'blog.post' ? 'blog' : null
+	const segment = getSegment(page)
 
 	const slug = page.metadata?.slug?.current
 	const path = slug === 'index' ? null : slug

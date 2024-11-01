@@ -45,18 +45,24 @@ export default defineType({
 				{ type: 'showcase-card' },
 				{ type: 'current-project-slider' },
 				{ type: 'page-title' },
+
+				{ type: 'news-frontpage' },
+				{ type: 'news-list' },
+				{ type: 'news-post-content' },
 			],
 			options: {
 				insertMenu: {
 					views: [{ name: 'list' }, { name: 'grid' }],
 					groups: [
 						{ name: 'blog', of: ['blog-list', 'blog-post-content'] },
+						{ name: 'news', of: ['news-list', 'news-post-content'] },
 						{ name: 'hero', of: ['hero', 'hero.saas', 'hero.split'] },
 						{
 							name: 'lists',
 							of: [
 								'accordion-list',
 								'blog-list',
+								'news-list',
 								'card-list',
 								'flag-list',
 								'logo-list',
@@ -94,7 +100,7 @@ export default defineType({
 				media ||
 				(slug === 'index' && VscHome) ||
 				(slug === '404' && VscQuestion) ||
-				(['blog', 'blog/*'].includes(slug) && VscEdit) ||
+				(['blog', 'blog/*', 'news', 'news/*'].includes(slug) && VscEdit) ||
 				(noindex && VscEyeClosed),
 		}),
 	},

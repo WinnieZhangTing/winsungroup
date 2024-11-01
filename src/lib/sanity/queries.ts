@@ -51,6 +51,7 @@ export const modulesQuery = groq`
 		link{ ${linkQuery} }
 	},
 	_type == 'blog-list' => { filteredCategory-> },
+	_type == 'news-list' => { filteredCategory-> },
 	_type == 'breadcrumbs' => { crumbs[]{ ${linkQuery} } },
 	_type == 'card-list' => {
 		cards[]{

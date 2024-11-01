@@ -11,6 +11,9 @@ import person from './documents/person'
 import pricing from './documents/pricing'
 import reputation from './documents/reputation'
 import testimonial from './documents/testimonial'
+import newsPost from './documents/news.post'
+import newsCategory from './documents/news.category'
+
 
 // objects
 import cta from './objects/cta'
@@ -44,6 +47,9 @@ import testimonialList from './modules/testimonial-list'
 import showcaseCard from './modules/showcase-card'
 import currentProjectSlider from './modules/current-project-slider'
 import pageTitle from './modules/page-title'
+import newsList from './modules/news-list'
+import newsFrontpage from './modules/news-frontpage'
+import newsPostContent from './modules/news-post-content'
 
 export const schemaTypes = [
 	// documents
@@ -51,6 +57,8 @@ export const schemaTypes = [
 	page,
 	blogPost,
 	blogCategory,
+	newsPost,
+	newsCategory,
 	navigation,
 	announcement,
 	redirect,
@@ -72,6 +80,11 @@ export const schemaTypes = [
 	blogFrontpage,
 	blogList,
 	blogPostContent,
+
+	newsFrontpage,
+	newsList,
+	newsPostContent,
+
 	breadcrumbs,
 	callout,
 	cardList,

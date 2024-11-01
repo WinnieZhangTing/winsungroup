@@ -1,5 +1,7 @@
 import { defineField, defineType } from 'sanity'
 import { VscLink } from 'react-icons/vsc'
+import { typeToSegment } from '@/lib/utils'
+
 
 export default defineType({
 	name: 'link',
@@ -28,7 +30,7 @@ export default defineType({
 		defineField({
 			name: 'internal',
 			type: 'reference',
-			to: [{ type: 'page' }, { type: 'blog.post' }],
+			to: [{ type: 'page' }, { type: 'blog.post' }, { type: 'news.post' }],
 			hidden: ({ parent }) => parent?.type !== 'internal',
 		}),
 		defineField({
@@ -62,7 +64,8 @@ export default defineType({
 		prepare: ({ label, _type, title, slug, external, params }) => ({
 			title: label || title,
 			subtitle: [
-				_type === 'blog.post' ? '/blog' : null,
+				//_type === 'blog.post' ? '/blog' : (_type === 'news.post' ? '/news' : null),
+				typeToSegment[_type] ? `/${typeToSegment[_type]}` : null,
 				external || (slug && (slug === 'index' ? '/' : `/${slug}`)),
 				params,
 			]

@@ -14,6 +14,8 @@ const structure: StructureResolver = (S, context) =>
 			S.documentTypeListItem('page').title('Pages').icon(VscMultipleWindows),
 			S.documentTypeListItem('blog.post').title('Blog posts'),
 			S.documentTypeListItem('blog.category').title('Blog categories'),
+			S.documentTypeListItem('news.post').title('News posts'),
+			S.documentTypeListItem('news.category').title('News categories'),
 			S.divider(),
 
 			S.documentTypeListItem('announcement').title('Announcements'),
