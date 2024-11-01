@@ -1,7 +1,27 @@
+import { MdLocationOn, MdPhone, MdEmail, MdAccessTime } from 'react-icons/md'
+
 import { getSite } from '@/lib/sanity/queries'
 import CTA from '@/ui/CTA'
 import { cn } from '@/lib/utils'
 import { stegaClean } from 'next-sanity'
+
+function getIcon(url?: string) {
+  if (!url) return null
+  
+  if (url.includes('maps.google.com') || url.includes('address') || url.includes('maps.app')) {
+    return <MdLocationOn className="mr-2" />
+  }
+  if (url.includes('tel:') || url.includes('phone')) {
+    return <MdPhone className="mr-2" />
+  }
+  if (url.includes('mailto:') || url.includes('email')) {
+    return <MdEmail className="mr-2" />
+  }
+  if (url.includes('hours') || url.includes('schedule')) {
+    return <MdAccessTime className="mr-2" />
+  }
+  return null
+}
 
 export default async function Menu() {
 	const { footerMenu } = await getSite()
@@ -15,16 +35,17 @@ export default async function Menu() {
 
 					case 'link.list':
 						return (
-							<div className="space-y-2 text-left" key={key}>
-								<div className="technical text-xs">
+							<div className="space-y-5 text-left" key={key}>
+								<div className="technical text-lg">
 									<CTA link={item.link}>
 										{stegaClean(item.link?.label) || item.link.internal?.title}
 									</CTA>
 								</div>
 
-								<ul>
+								<ul className="flex flex-col gap-3">
 									{item.links?.map((link, key) => (
-										<li key={key}>
+										<li key={key} className="flex items-center gap-2">
+											{getIcon(link.external)}
 											<CTA
 												className={cn(
 													'inline-block py-px hover:underline',
