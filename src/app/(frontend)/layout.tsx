@@ -7,6 +7,7 @@ import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import VisualEditingControls from '@/ui/VisualEditingControls'
 import '@/styles/app.css'
+import AOS from '@/ui/AOS'
 
 export default async function RootLayout({
 	children,
@@ -30,6 +31,7 @@ export default async function RootLayout({
 				<SpeedInsights />
 				<VisualEditingControls />
 			</body>
+			<AOS />
 		</html>
 	)
 }
