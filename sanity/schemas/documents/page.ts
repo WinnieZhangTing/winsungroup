@@ -44,6 +44,7 @@ export default defineType({
 				{ type: 'testimonial.featured' },
 				{ type: 'showcase-card' },
 				{ type: 'current-project-slider' },
+				{ type: 'page-title' },
 			],
 			options: {
 				insertMenu: {

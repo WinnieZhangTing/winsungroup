@@ -59,6 +59,11 @@ export default defineType({
 			group: 'navigation',
 		}),
 		defineField({
+			name: 'footerDescription',
+			type: 'text',
+			group: 'navigation',
+    }),
+		defineField({
 			name: 'copyright',
 			type: 'array',
 			of: [

@@ -28,7 +28,8 @@ export async function getSite() {
 				headerMenu->{ ${navigationQuery} },
 				footerMenu->{ ${navigationQuery} },
 				social->{ ${navigationQuery} },
-				'ogimage': ogimage.asset->url
+				'ogimage': ogimage.asset->url,
+				footerDescription
 			}
 		`,
 		{ tags: ['site'] },
