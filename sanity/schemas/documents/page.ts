@@ -103,7 +103,7 @@ export default defineType({
 				media ||
 				(slug === 'index' && VscHome) ||
 				(slug === '404' && VscQuestion) ||
-				(['blog', 'blog/*', 'news', 'news/*'].includes(slug) && VscEdit) ||
+				(['blog', 'blog/*', 'news', 'news/*', 'case-study/*'].includes(slug) && VscEdit) ||
 				(noindex && VscEyeClosed),
 		}),
 	},
