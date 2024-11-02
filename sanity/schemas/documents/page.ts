@@ -51,6 +51,7 @@ export default defineType({
 				{ type: 'news-post-content' },
 
 				{ type: 'case-study-post-content' },
+				{ type: 'map' },
 			],
 			options: {
 				insertMenu: {
@@ -103,7 +104,8 @@ export default defineType({
 				media ||
 				(slug === 'index' && VscHome) ||
 				(slug === '404' && VscQuestion) ||
-				(['blog', 'blog/*', 'news', 'news/*', 'case-study/*'].includes(slug) && VscEdit) ||
+				(['blog', 'blog/*', 'news', 'news/*', 'case-study/*'].includes(slug) &&
+					VscEdit) ||
 				(noindex && VscEyeClosed),
 		}),
 	},
