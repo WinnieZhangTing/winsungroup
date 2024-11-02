@@ -26,6 +26,7 @@ import NewsFrontpage from './news/NewsFrontpage'
 import NewsList from './news/NewsList'
 import NewsPostContent from './news/PostContent'
 import CaseStudyPostContent from './CaseStudy/PostContent'
+import MapModule from './Map'
 export default function Modules({
 	modules,
 	page,
@@ -101,6 +102,8 @@ export default function Modules({
 						return <CurrentProjectSlider {...module} key={module._key} />
 					case 'page-title':
 						return <PageTitle {...module} key={module._key} />
+					case 'map':
+						return <MapModule {...module} key={module._key} />
 					default:
 						return <div data-type={module._type} key={module._key} />
 				}
