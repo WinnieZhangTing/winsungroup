@@ -25,4 +25,5 @@ export function getSegment(page: Sanity.PageBase) {
 export const typeToSegment: Record<string, string> = {
 	'blog.post': 'blog',
 	'news.post': 'news',
+	'case-study.post': 'case-study',
 }

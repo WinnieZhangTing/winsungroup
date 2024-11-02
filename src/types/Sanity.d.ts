@@ -88,6 +88,10 @@ declare global {
 
 		type NewsCategory = PostCategory
 
+		type CaseStudyPost = BasePost & {
+			readonly _type: 'case-study.post'
+		}
+
 		// miscellaneous
 
 		type Logo = SanityDocument<{

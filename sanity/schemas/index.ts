@@ -50,6 +50,8 @@ import pageTitle from './modules/page-title'
 import newsList from './modules/news-list'
 import newsFrontpage from './modules/news-frontpage'
 import newsPostContent from './modules/news-post-content'
+import caseStudyPost from './documents/case-study.post'
+import caseStudyPostContent from './modules/case-study-post-content'
 
 export const schemaTypes = [
 	// documents
@@ -59,6 +61,7 @@ export const schemaTypes = [
 	blogCategory,
 	newsPost,
 	newsCategory,
+	caseStudyPost,
 	navigation,
 	announcement,
 	redirect,
@@ -84,6 +87,8 @@ export const schemaTypes = [
 	newsFrontpage,
 	newsList,
 	newsPostContent,
+
+	caseStudyPostContent,
 
 	breadcrumbs,
 	callout,

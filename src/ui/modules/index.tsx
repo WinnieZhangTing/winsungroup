@@ -25,7 +25,7 @@ import PageTitle from './PageTitle'
 import NewsFrontpage from './news/NewsFrontpage'
 import NewsList from './news/NewsList'
 import NewsPostContent from './news/PostContent'
-
+import CaseStudyPostContent from './CaseStudy/PostContent'
 export default function Modules({
 	modules,
 	page,
@@ -53,6 +53,8 @@ export default function Modules({
 						return <NewsFrontpage {...module} key={module._key} />
 					case 'news-list':
 						return <NewsList {...module} key={module._key} />
+					case 'case-study-post-content':
+						return <CaseStudyPostContent {...module} post={post} key={module._key} />
 					case 'breadcrumbs':
 						return (
 							<Breadcrumbs

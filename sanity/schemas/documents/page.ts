@@ -49,6 +49,8 @@ export default defineType({
 				{ type: 'news-frontpage' },
 				{ type: 'news-list' },
 				{ type: 'news-post-content' },
+
+				{ type: 'case-study-post-content' },
 			],
 			options: {
 				insertMenu: {
@@ -57,6 +59,7 @@ export default defineType({
 						{ name: 'blog', of: ['blog-list', 'blog-post-content'] },
 						{ name: 'news', of: ['news-list', 'news-post-content'] },
 						{ name: 'hero', of: ['hero', 'hero.saas', 'hero.split'] },
+						{ name: 'case-study', of: ['case-study-post-content'] },
 						{
 							name: 'lists',
 							of: [

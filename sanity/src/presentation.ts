@@ -3,7 +3,7 @@ import { map } from 'rxjs'
 import type { DocumentLocationResolver } from 'sanity/presentation'
 
 export const locations: DocumentLocationResolver = (params, context) => {
-	if (['page', 'blog.post', 'news.post'].includes(params.type)) {
+	if (['page', 'blog.post', 'news.post', 'case-study.post'].includes(params.type)) {
 		const doc$ = context.documentStore.listenQuery(
 			`*[_id == $id][0]{title,metadata}`,
 			params,
