@@ -48,7 +48,7 @@ export default function CreativeModule({
 		<section className={cn(background && 'bg-bgPrimary py-12')}>
 			<div className="section space-y-8">
 				{pretitle && (
-					<Pretitle className="text-primary mx-auto text-center text-lg">
+					<Pretitle className="text-primary mx-auto text-center text-2xl">
 						{pretitle}
 					</Pretitle>
 				)}
@@ -94,7 +94,7 @@ export default function CreativeModule({
 												module={subModule}
 												className={cn(
 													stegaClean(textAlign) === 'center' &&
-														'justify-center',
+													'justify-center',
 												)}
 												key={ii}
 											/>
@@ -109,7 +109,7 @@ export default function CreativeModule({
 												module={subModule}
 												className={cn(
 													stegaClean(textAlign) === 'center' &&
-														'[&_img]:mx-auto',
+													'[&_img]:mx-auto',
 												)}
 												key={ii}
 											/>

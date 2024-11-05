@@ -14,17 +14,21 @@ export default defineType({
 			description: 'Add a title above the map',
 		}),
 		defineField({
-			name: 'location',
-			title: 'Location',
-			type: 'geopoint',
-			description: 'Select the location on the map',
+			name: 'locations',
+			title: 'Locations',
+			type: 'array',
+			of: [{ type: 'geopoint' }],
+			description: 'Select up to 3 locations on the map',
+			options: {
+				layout: 'tags',
+			},
+			validation: (Rule) =>
+				Rule.max(3).error('You can only add up to 3 locations'),
 		}),
 		defineField({
 			name: 'zoomLevel',
 			title: 'Zoom Level',
 			type: 'number',
-			initialValue: 12,
-			description: 'Set the initial zoom level of the map',
 		}),
 	],
 	preview: {
