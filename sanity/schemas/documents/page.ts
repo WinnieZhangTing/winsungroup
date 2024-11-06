@@ -34,6 +34,7 @@ export default defineType({
 				{ type: 'hero' },
 				{ type: 'hero.saas' },
 				{ type: 'hero.split' },
+				{ type: 'hero.slider' },
 				{ type: 'logo-list' },
 				{ type: 'pricing-list' },
 				{ type: 'richtext-module' },
@@ -59,7 +60,10 @@ export default defineType({
 					groups: [
 						{ name: 'blog', of: ['blog-list', 'blog-post-content'] },
 						{ name: 'news', of: ['news-list', 'news-post-content'] },
-						{ name: 'hero', of: ['hero', 'hero.saas', 'hero.split'] },
+						{
+							name: 'hero',
+							of: ['hero', 'hero.saas', 'hero.split', 'hero.slider'],
+						},
 						{ name: 'case-study', of: ['case-study-post-content'] },
 						{
 							name: 'lists',

@@ -27,6 +27,7 @@ import NewsList from './news/NewsList'
 import NewsPostContent from './news/PostContent'
 import CaseStudyPostContent from './CaseStudy/PostContent'
 import MapModule from './Map'
+import HeroSlider from './HeroSlider'
 export default function Modules({
 	modules,
 	page,
@@ -80,6 +81,8 @@ export default function Modules({
 						return <HeroSplit {...module} key={module._key} />
 					case 'hero.saas':
 						return <HeroSaaS {...module} key={module._key} />
+					case 'hero.slider':
+						return <HeroSlider {...module} key={module._key} />
 					case 'logo-list':
 						return <LogoList {...module} key={module._key} />
 					case 'pricing-list':

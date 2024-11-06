@@ -52,6 +52,7 @@ import newsPostContent from './modules/news-post-content'
 import caseStudyPost from './documents/case-study.post'
 import caseStudyPostContent from './modules/case-study-post-content'
 import map from './modules/map'
+import heroSlider from './modules/hero.slider'
 
 export const schemaTypes = [
 	// documents
@@ -99,6 +100,7 @@ export const schemaTypes = [
 	hero,
 	heroSaas,
 	heroSplit,
+	heroSlider,
 	logoList,
 	pricingList,
 	richtextModule,
