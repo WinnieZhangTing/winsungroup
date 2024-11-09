@@ -17,7 +17,17 @@ export default defineType({
 			name: 'locations',
 			title: 'Locations',
 			type: 'array',
-			of: [{ type: 'geopoint' }],
+			of: [
+				{
+					type: 'object',
+					fields: [
+						{ name: 'lat', title: 'Latitude', type: 'number' },
+						{ name: 'lng', title: 'Longitude', type: 'number' },
+						{ name: 'title', title: 'Title', type: 'string' },
+						{ name: 'address', title: 'Address', type: 'string' },
+					],
+				},
+			],
 			description: 'Select up to 3 locations on the map',
 			options: {
 				layout: 'tags',
