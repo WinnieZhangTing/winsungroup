@@ -53,6 +53,7 @@ export default defineType({
 
 				{ type: 'case-study-post-content' },
 				{ type: 'map' },
+				{ type: 'certificate-grid' },
 			],
 			options: {
 				insertMenu: {

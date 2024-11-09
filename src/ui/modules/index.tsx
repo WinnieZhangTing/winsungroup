@@ -28,6 +28,7 @@ import NewsPostContent from './news/PostContent'
 import CaseStudyPostContent from './CaseStudy/PostContent'
 import MapModule from './Map'
 import HeroSlider from './HeroSlider'
+import CertificateGrid from './CertificateGrid'
 export default function Modules({
 	modules,
 	page,
@@ -107,6 +108,8 @@ export default function Modules({
 						return <PageTitle {...module} key={module._key} />
 					case 'map':
 						return <MapModule {...module} key={module._key} />
+					case 'certificate-grid':
+						return <CertificateGrid {...module} key={module._key} />
 					default:
 						return <div data-type={module._type} key={module._key} />
 				}
