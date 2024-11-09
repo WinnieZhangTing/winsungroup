@@ -53,6 +53,7 @@ import caseStudyPost from './documents/case-study.post'
 import caseStudyPostContent from './modules/case-study-post-content'
 import map from './modules/map'
 import heroSlider from './modules/hero.slider'
+import certificateGrid from './modules/certificateGrid'
 
 export const schemaTypes = [
 	// documents
@@ -113,4 +114,5 @@ export const schemaTypes = [
 	currentProjectSlider,
 	pageTitle,
 	map,
+	certificateGrid,
 ]

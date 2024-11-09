@@ -6,4 +6,8 @@
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features"
 	},
+	"conventionalCommits.scopes": [
+		"footer",
+		"about"
+	],
 }

@@ -16,6 +16,7 @@ const config: Config = {
 				primary: '#F6A329',
 				secondary: '#1B2B3A',
 				bgPrimary: '#F7E4D6',
+				footerBg: '#39294d',
 			},
 			maxHeight: {
 				fold: 'calc(100svh - var(--header-height))',

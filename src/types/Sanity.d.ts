@@ -13,6 +13,7 @@ declare global {
 			headerMenu?: Navigation
 			footerMenu?: Navigation
 			social?: Navigation
+			qrCodes?: Image[]
 			footerDescription?: string
 			copyright?: any
 			ogimage?: string

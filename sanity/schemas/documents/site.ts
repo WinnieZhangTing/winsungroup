@@ -59,6 +59,12 @@ export default defineType({
 			group: 'navigation',
 		}),
 		defineField({
+			name: 'qrCodes',
+			type: 'array',
+			of: [{ type: 'image' }],
+			group: 'navigation',
+		}),
+		defineField({
 			name: 'footerDescription',
 			type: 'text',
 			group: 'navigation',
