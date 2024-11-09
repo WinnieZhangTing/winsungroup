@@ -11,7 +11,7 @@ export default async function Footer() {
 	const logoImage = logo?.image?.light || logo?.image?.default
 
 	return (
-		<footer className="bg-accent text-center text-canvas">
+		<footer className="bg-footerBg text-center text-canvas">
 			<div className="section border-b border-canvas/20 py-8">
 				<div className="mx-auto max-w-screen-xl space-y-8">
 					<div className="flex flex-wrap justify-between gap-x-12 gap-y-8 max-sm:flex-col">
@@ -28,8 +28,8 @@ export default async function Footer() {
 								)}
 							</Link>
 							{footerDescription && (
-                <p className="max-w-xs text-base text-left text-canvas">{footerDescription}</p>
-              )}
+								<p className="max-w-xs text-base text-left text-canvas">{footerDescription}</p>
+							)}
 							<Social />
 						</div>
 
