@@ -4,12 +4,14 @@ import Reputation from '@/ui/Reputation'
 import CTAList from '@/ui/CTAList'
 import Img from '@/ui/Img'
 import { cn } from '@/lib/utils'
+import moduleProps from '@/lib/moduleProps'
 
 export default function HeroSplit({
 	pretitle,
 	content,
 	ctas,
 	image,
+	...props
 }: Partial<{
 	pretitle: string
 	content: any
@@ -18,9 +20,9 @@ export default function HeroSplit({
 		onRight?: boolean
 		onBottom?: boolean
 	}
-}>) {
+}> & Sanity.Module) {
 	return (
-		<section className="section grid items-center gap-8 md:grid-cols-2 md:gap-x-12">
+		<section className="section grid items-center gap-8 md:grid-cols-2 md:gap-x-12" {...moduleProps(props)}>
 			<figure
 				className={cn(
 					'max-md:full-bleed',

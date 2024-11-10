@@ -54,7 +54,8 @@ import caseStudyPostContent from './modules/case-study-post-content'
 import map from './modules/map'
 import heroSlider from './modules/hero.slider'
 import certificateGrid from './modules/certificateGrid'
-
+import teamMember from './documents/team-member'
+import teamMemberContent from './modules/team-member-content'
 export const schemaTypes = [
 	// documents
 	site,
@@ -64,6 +65,7 @@ export const schemaTypes = [
 	newsPost,
 	newsCategory,
 	caseStudyPost,
+	teamMember,
 	navigation,
 	announcement,
 	redirect,
@@ -91,7 +93,7 @@ export const schemaTypes = [
 	newsPostContent,
 
 	caseStudyPostContent,
-
+	teamMemberContent,
 	breadcrumbs,
 	callout,
 	cardList,

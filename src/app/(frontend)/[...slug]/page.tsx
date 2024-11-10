@@ -22,7 +22,7 @@ export async function generateStaticParams() {
 		groq`*[
 			_type == 'page' &&
 			defined(metadata.slug.current) &&
-			!(metadata.slug.current in ['index', '404', 'blog/*', 'news/*', 'case-study/*'])
+			!(metadata.slug.current in ['index', '404', 'blog/*', 'news/*', 'case-study/*', 'team-member/*'])
 		].metadata.slug.current`,
 	)
 
@@ -34,7 +34,7 @@ async function getPage(params: { slug?: string[] }) {
 		groq`*[
 			_type == 'page' &&
 			metadata.slug.current == $slug &&
-			!(metadata.slug.current in ['index', '404', 'blog/*', 'news/*', 'case-study/*'])
+			!(metadata.slug.current in ['index', '404', 'blog/*', 'news/*', 'case-study/*', 'team-member/*'])
 		][0]{
 			...,
 			modules[]{ ${modulesQuery} },

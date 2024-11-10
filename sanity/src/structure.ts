@@ -17,6 +17,7 @@ const structure: StructureResolver = (S, context) =>
 			S.documentTypeListItem('news.post').title('News posts'),
 			S.documentTypeListItem('news.category').title('News categories'),
 			S.documentTypeListItem('case-study.post').title('Case study posts'),
+			S.documentTypeListItem('team-member').title('Team members'),
 			S.divider(),
 
 			S.documentTypeListItem('announcement').title('Announcements'),

@@ -26,4 +26,5 @@ export const typeToSegment: Record<string, string> = {
 	'blog.post': 'blog',
 	'news.post': 'news',
 	'case-study.post': 'case-study',
+	'team-member': 'team-member',
 }
