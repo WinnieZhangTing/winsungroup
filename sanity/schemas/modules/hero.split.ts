@@ -8,7 +8,7 @@ export default defineType({
 	title: 'Hero (split)',
 	icon: TfiLayoutMediaLeft,
 	type: 'object',
-	groups: [{ name: 'content', default: true }, { name: 'image' }],
+	groups: [{ name: 'content', default: true }, { name: 'image' }, { name: 'options' }],
 	fields: [
 		defineField({
 			name: 'pretitle',
@@ -62,6 +62,12 @@ export default defineType({
 				}),
 			],
 			group: 'image',
+		}),
+		defineField({
+			name: 'uid',
+			title: 'Unique Identifier',
+			type: 'uid',
+			group: 'options',
 		}),
 	],
 	preview: {

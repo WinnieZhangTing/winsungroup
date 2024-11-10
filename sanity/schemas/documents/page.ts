@@ -52,6 +52,7 @@ export default defineType({
 				{ type: 'news-post-content' },
 
 				{ type: 'case-study-post-content' },
+				{ type: 'team-member-content' },
 				{ type: 'map' },
 				{ type: 'certificate-grid' },
 			],
@@ -66,6 +67,7 @@ export default defineType({
 							of: ['hero', 'hero.saas', 'hero.split', 'hero.slider'],
 						},
 						{ name: 'case-study', of: ['case-study-post-content'] },
+						{ name: 'team-member', of: ['team-member-content'] },
 						{
 							name: 'lists',
 							of: [
@@ -109,7 +111,7 @@ export default defineType({
 				media ||
 				(slug === 'index' && VscHome) ||
 				(slug === '404' && VscQuestion) ||
-				(['blog', 'blog/*', 'news', 'news/*', 'case-study/*'].includes(slug) &&
+				(['blog', 'blog/*', 'news', 'news/*', 'case-study/*', 'team-member/*'].includes(slug) &&
 					VscEdit) ||
 				(noindex && VscEyeClosed),
 		}),

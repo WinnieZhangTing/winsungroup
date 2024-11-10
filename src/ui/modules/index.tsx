@@ -29,6 +29,7 @@ import CaseStudyPostContent from './CaseStudy/PostContent'
 import MapModule from './Map'
 import HeroSlider from './HeroSlider'
 import CertificateGrid from './CertificateGrid'
+import TeamMemberContent from './TeamMember/Content'
 export default function Modules({
 	modules,
 	page,
@@ -58,6 +59,8 @@ export default function Modules({
 						return <NewsList {...module} key={module._key} />
 					case 'case-study-post-content':
 						return <CaseStudyPostContent {...module} post={post} key={module._key} />
+					case 'team-member-content':
+						return <TeamMemberContent {...module} post={post as Sanity.TeamMember} key={module._key} />
 					case 'breadcrumbs':
 						return (
 							<Breadcrumbs

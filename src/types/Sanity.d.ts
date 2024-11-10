@@ -93,6 +93,15 @@ declare global {
 			readonly _type: 'case-study.post'
 		}
 
+		type TeamMember = BasePost & {
+			readonly _type: 'team-member'
+			name: string
+			credentials: string
+			position: string
+			profileImage?: Image
+			ctas?: CTA[]
+		}
+
 		// miscellaneous
 
 		type Logo = SanityDocument<{
