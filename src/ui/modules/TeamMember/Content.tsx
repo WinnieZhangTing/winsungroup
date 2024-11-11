@@ -72,10 +72,11 @@ export default function PostContent({
 
 				<Content
 					value={post.body}
-					className={cn(css.body, 'grid max-w-screen-md text-center')}
+					className={cn(css.body, 'max-w-screen-lg text-center')}
 				>
 					<hr />
 				</Content>
+
 				{post.ctas && <CTAList ctas={post.ctas.map(cta => ({ ...cta, className: 'text-flame' }))} className="flex justify-center" />}
 			</div>
 

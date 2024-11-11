@@ -55,6 +55,7 @@ export default defineType({
 				{ type: 'team-member-content' },
 				{ type: 'map' },
 				{ type: 'certificate-grid' },
+				{ type: 'team-member-list' },
 			],
 			options: {
 				insertMenu: {
@@ -67,7 +68,7 @@ export default defineType({
 							of: ['hero', 'hero.saas', 'hero.split', 'hero.slider'],
 						},
 						{ name: 'case-study', of: ['case-study-post-content'] },
-						{ name: 'team-member', of: ['team-member-content'] },
+						{ name: 'team-member', of: ['team-member-content', 'team-member-list'] },
 						{
 							name: 'lists',
 							of: [

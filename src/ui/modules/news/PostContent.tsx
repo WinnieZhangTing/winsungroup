@@ -51,7 +51,7 @@ export default function PostContent({
 
 				<Content
 					value={post.body}
-					className={cn(css.body, 'grid max-w-screen-md')}
+					className={cn(css.body, 'max-w-screen-md')}
 				>
 					<hr />
 				</Content>
