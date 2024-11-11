@@ -10,8 +10,9 @@ import CTAList from '@/ui/CTAList'
 
 export default function PostContent({
 	post,
+	ctas,
 	...props
-}: { post?: Sanity.TeamMember, ctas?: Sanity.CTA[] } & Sanity.Module) {
+}: { post?: Sanity.TeamMember, ctas: Sanity.CTA[] } & Sanity.Module) {
 	if (!post) return null
 
 	const showTOC = !post.hideTableOfContents && !!post.headings?.length
@@ -72,12 +73,13 @@ export default function PostContent({
 
 				<Content
 					value={post.body}
-					className={cn(css.body, 'max-w-screen-lg text-center')}
+					className={cn(css.body, 'max-w-screen-lg')}
 				>
 					<hr />
 				</Content>
 
-				{post.ctas && <CTAList ctas={post.ctas.map(cta => ({ ...cta, className: 'text-flame' }))} className="flex justify-center" />}
+				{ctas && <CTAList ctas={ctas.map(cta => ({ ...cta, className: 'text-flame' }))} className="flex justify-center" />}
+
 			</div>
 
 		</article>

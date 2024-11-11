@@ -13,10 +13,10 @@ export default function CertificateGrid({
 }> & Sanity.Module) {
 	return (
 		<section
-			className="section py-12"
-			data-aos="fade-up"
-			data-aos-duration="800"
-			data-aos-easing="ease-in-out"
+			className="section"
+		// data-aos="fade-up"
+		// data-aos-duration="800"
+		// data-aos-easing="ease-in-out"
 		>
 			<div className="grid gap-8 lg:grid-cols-3 md:grid-cols-2">
 				{certificates?.map((certificate, index) => (

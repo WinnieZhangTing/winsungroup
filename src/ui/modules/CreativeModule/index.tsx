@@ -53,7 +53,12 @@ export default function CreativeModule({
 					</Pretitle>
 				)}
 				{intro && (
-					<header className="richtext mx-auto max-w-xl text-center">
+					<header className="richtext mx-auto max-w-xl"
+						style={
+							{
+								textAlign: stegaClean(textAlign),
+							} as React.CSSProperties
+						}>
 						<PortableText value={intro} />
 					</header>
 				)}

@@ -19,6 +19,11 @@ export default defineType({
       validation: (Rule) => Rule.required(),
       group: 'content',
     }),
+    defineField({
+			name: 'shortCredentials', 
+			type: 'string',
+			group: 'content',
+		}),
 		defineField({
 			name: 'credentials', 
 			type: 'string',
@@ -81,13 +86,13 @@ export default defineType({
       type: 'metadata',
       group: 'seo',
     }),
-		defineField({
-			name: 'ctas',
-			title: 'Call-to-actions',
-			type: 'array',
-			of: [{ type: 'cta' }],
-			group: 'content',
-		}),
+		// defineField({
+		// 	name: 'ctas',
+		// 	title: 'Call-to-actions',
+		// 	type: 'array',
+		// 	of: [{ type: 'cta' }],
+		// 	group: 'content',
+		// }),
   ],
   preview: {
     select: {

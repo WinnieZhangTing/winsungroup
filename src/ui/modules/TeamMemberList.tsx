@@ -2,18 +2,20 @@ import { PortableText } from 'next-sanity'
 import Img from '@/ui/Img'
 import Link from 'next/link'
 import { CgArrowRight } from 'react-icons/cg'
+import moduleProps from '@/lib/moduleProps'
 
 export default function TeamMemberList({
 	title,
 	intro,
-	members
+	members,
+	...props
 }: Partial<{
 	title: string
 	intro: any
 	members: Sanity.TeamMember[]
 }>) {
 	return (
-		<section className="section space-y-8">
+		<section className="section space-y-8" {...moduleProps(props)}>
 			{(title || intro) && (
 				<header className="richtext mx-auto max-w-xl text-center">
 					{title && (
@@ -52,6 +54,9 @@ export default function TeamMemberList({
 									<strong>{member.name}</strong>
 								</p>
 							</Link>
+							{(member.shortCredentials) && (
+								<p className="">{member.shortCredentials}</p>
+							)}
 							{(member.shortTitle || member.position) && (
 								<p className="">{member.shortTitle || member.position}</p>
 							)}
