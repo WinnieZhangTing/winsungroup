@@ -33,6 +33,12 @@ export default defineType({
       }],
       group: 'content'
     }),
+    defineField({
+			name: 'uid',
+			title: 'Unique Identifier',
+			type: 'uid',
+			group: 'options',
+		}),
   ],
   preview: {
     select: {

@@ -12,6 +12,33 @@ export default defineType({
 			title: 'Unique Identifier',
 			type: 'uid',
 		}),
+		// defineField({
+		// 	name: 'goBackButton',
+		// 	title: 'Go Back Button',
+		// 	type: 'object',
+		// 	fields: [
+		// 		{
+		// 			name: 'label',
+		// 			title: 'Label',
+		// 			type: 'string',
+		// 			validation: (Rule) => Rule.required(),
+		// 		},
+		// 		{
+		// 			name: 'goBackUid',
+		// 			title: 'Go Back Unique Identifier',
+		// 			type: 'uid',
+		// 			validation: (Rule) => Rule.required(),
+		// 		}
+		// 	],
+		// 	validation: (Rule) => Rule.required(),
+		// }),
+
+		defineField({
+			name: 'ctas',
+			title: 'Call-to-actions',
+			type: 'array',
+			of: [{ type: 'cta' }]
+		}),
 	],
 	preview: {
 		prepare: () => ({

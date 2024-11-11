@@ -97,10 +97,11 @@ declare global {
 			readonly _type: 'team-member'
 			name: string
 			shortTitle: string
+			shortCredentials: string
 			credentials: string
 			position: string
 			profileImage?: Image
-			ctas?: CTA[]
+			//ctas?: CTA[]
 		}
 
 		// miscellaneous
