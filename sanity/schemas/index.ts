@@ -56,6 +56,7 @@ import heroSlider from './modules/hero.slider'
 import certificateGrid from './modules/certificateGrid'
 import teamMember from './documents/team-member'
 import teamMemberContent from './modules/team-member-content'
+import teamMemberList from './modules/team-member-list'
 export const schemaTypes = [
 	// documents
 	site,
@@ -117,4 +118,5 @@ export const schemaTypes = [
 	pageTitle,
 	map,
 	certificateGrid,
+	teamMemberList,
 ]

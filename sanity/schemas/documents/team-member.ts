@@ -24,6 +24,11 @@ export default defineType({
 			type: 'string',
 			group: 'content',
 		}),
+		defineField({
+			name: 'shortTitle',
+			type: 'string',
+			group: 'content',
+		}),
     defineField({
       name: 'position',
       type: 'string',

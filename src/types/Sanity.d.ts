@@ -96,6 +96,7 @@ declare global {
 		type TeamMember = BasePost & {
 			readonly _type: 'team-member'
 			name: string
+			shortTitle: string
 			credentials: string
 			position: string
 			profileImage?: Image
