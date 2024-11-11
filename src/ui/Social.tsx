@@ -26,18 +26,22 @@ export default async function Social({
 				switch (item._type) {
 					case 'link':
 						return (
-							<button 
-								className="flex size-12 items-center justify-center rounded-lg border border-primary bg-primary text-canvas transition-colors hover:bg-accent"
+							<a
+								className="flex size-12 items-center justify-center rounded-lg border border-primary bg-primary text-canvas transition-colors hover:bg-footerBg"
 								aria-label={item.label}
-							> 
+								key={key}
+								href={item.external}
+								target="_blank"
+								rel="noopener noreferrer"
+							>
 								<Icon url={item.external} aria-label={item.label} />
-							</button>
+							</a>
 							// <CTA
-							// 	className="px-2 py-1 hover:!opacity-100 group-has-[a:hover]:opacity-50"
+							// 	className="flex size-12 items-center justify-center rounded-lg border border-primary bg-primary text-canvas transition-colors hover:bg-footerBg"
 							// 	link={item}
 							// 	key={key}
 							// >
-							// 	
+							// 	<Icon url={item.external} aria-label={item.label} />
 							// </CTA>
 						)
 

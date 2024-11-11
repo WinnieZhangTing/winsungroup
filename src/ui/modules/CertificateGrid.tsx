@@ -28,7 +28,7 @@ export default function CertificateGrid({
 							<Img
 								image={certificate.image}
 								className="h-full w-full object-contain transition-transform duration-500 group-hover:scale-105"
-								imageWidth={400}
+								imageWidth={600}
 							/>
 						</figure>
 					</div>
