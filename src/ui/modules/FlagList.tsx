@@ -33,13 +33,23 @@ export default function FlagList({
 			data-aos-easing="ease-in-out"
 		>
 			{pretitle && (
-				<Pretitle className="text-primary text-center text-lg">
+				<Pretitle
+					className="text-primary text-center text-lg"
+					data-aos="fade-up"
+					data-aos-duration="800"
+					data-aos-delay="200"
+				>
 					{pretitle}
 				</Pretitle>
 			)}
 
 			{intro && (
-				<header className="richtext text-center">
+				<header
+					className="richtext text-center"
+					data-aos="fade-up"
+					data-aos-duration="800"
+					data-aos-delay="400"
+				>
 					<PortableText value={intro} />
 				</header>
 			)}
@@ -54,6 +64,9 @@ export default function FlagList({
 						'--col': columns || items?.length,
 					} as React.CSSProperties
 				}
+				data-aos="fade-up"
+				data-aos-duration="800"
+				data-aos-delay="600"
 			>
 				{items?.map((item, key) => (
 					<article
