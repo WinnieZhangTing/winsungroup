@@ -28,7 +28,7 @@ export default function TeamMemberList({
 			<div className="grid gap-x-12 gap-y-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
 				{members?.map((member) => (
 
-					<article className="space-y-4 p-6">
+					<article className="space-y-4 p-6" key={member._id}>
 						{member.profileImage && (
 							<Link
 								href={`/team-member/${member.metadata.slug.current}`}

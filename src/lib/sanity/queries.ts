@@ -104,4 +104,8 @@ export const modulesQuery = groq`
 	_type == 'testimonial.featured' => { testimonial-> },
 	_type == 'testimonial-list' => { testimonials[]-> },
 	_type == 'team-member-list' => { members[]-> },
+	_type == 'team-member-content' => {
+		...,
+		ctas[]{ ${ctaQuery} }
+	},
 `

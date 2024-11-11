@@ -12,7 +12,7 @@ export default function PostContent({
 	post,
 	ctas,
 	...props
-}: { post?: Sanity.TeamMember, ctas: Sanity.CTA[] } & Sanity.Module) {
+}: { post?: Sanity.TeamMember, ctas?: Sanity.CTA[] } & Sanity.Module) {
 	if (!post) return null
 
 	const showTOC = !post.hideTableOfContents && !!post.headings?.length

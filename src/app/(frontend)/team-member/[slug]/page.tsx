@@ -36,10 +36,6 @@ async function getPost(params: { slug?: string }) {
         style,
         'text': pt::text(@)
       },
-      ctas[]{
-        ...,
-        link{ ${linkQuery} }
-      },
       metadata {
         ...,
         'ogimage': image.asset->url + '?w=1200'
