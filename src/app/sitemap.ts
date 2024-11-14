@@ -6,7 +6,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 		groq`{
 			'pages': *[
 				_type == 'page' &&
-				!(metadata.slug.current in ['404', 'blog/*', 'news/*']) &&
+				!(metadata.slug.current in ['404', 'blog/*', 'news/*', 'case-study/*', 'team-member/*']) &&
 				metadata.noIndex != true
 			]|order(metadata.slug.current){
 				'url': $baseUrl + select(metadata.slug.current == 'index' => '', metadata.slug.current),
@@ -23,6 +23,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 			},
 			'newsPosts': *[_type == 'news.post' && metadata.noIndex != true]|order(name){
 				'url': $baseUrl + 'news/' + metadata.slug.current,
+				'lastModified': _updatedAt,
+				'priority': 0.4
+			},
+			'caseStudies': *[_type == 'case-study.post' && metadata.noIndex != true]|order(name){
+				'url': $baseUrl + 'case-study/' + metadata.slug.current,
+				'lastModified': _updatedAt,
+				'priority': 0.4
+			},
+			'teamMembers': *[_type == 'team-member' && metadata.noIndex != true]|order(name){
+				'url': $baseUrl + 'team-member/' + metadata.slug.current,
 				'lastModified': _updatedAt,
 				'priority': 0.4
 			}
